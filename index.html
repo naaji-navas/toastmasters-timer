@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Najid  Navas">
     <title>Cisco Xpressions Toastmasters Timer | Always ready for Your Speeches</title>
-    <link rel="icon" type="image/png" href="img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" href="img/icons/chrome/timer-svgrepo-com.svg" />
     <link rel="stylesheet" href="css/loading.min.css" />
     <link rel="stylesheet" href="css/timer.min.css" rel="preload" as="style" />
     <link rel="stylesheet" href="css/material.indigo-pink.min.css" defer />
@@ -59,6 +59,16 @@
             font-family: 'Arial', sans-serif;
             margin-top: 20px;
         }
+        footer {
+            text-align: center;
+            color: #f6f6f6;
+            padding: 2px;
+            position: fixed;
+            bottom: -0;
+            width: 100%;
+            background-color: #1e1c1c;
+           
+        }
         
     </style>
 </head>
@@ -85,43 +95,47 @@
             <input type="hidden" value="" name="hiddenSpeechType" id="hiddenSpeechType" />
             <label for="cmbSpeechType" class="mdl-textfield__label" data-tag="chooseSpeech"></label>
             <ul for="cmbSpeechType" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                <li class="mdl-menu__item" data-val="0" data-tag="opt1"></li>
+                
                 <li class="mdl-menu__item" data-val="1" data-tag="opt2"></li>
                 <li class="mdl-menu__item" data-val="2" data-tag="opt3"></li>
-                <li class="mdl-menu__item" data-val="3" data-tag="opt13"></li>
-                <li class="mdl-menu__item" data-val="4" data-tag="opt5"></li>
+                
+                <!-- <li class="mdl-menu__item" data-val="4" data-tag="opt5"></li> -->
                 <li class="mdl-menu__item" data-val="5" data-tag="opt6"></li>
-                <li class="mdl-menu__item" data-val="6" data-tag="opt7"></li>
                 <li class="mdl-menu__item" data-val="7" data-tag="opt8"></li>
+                <li class="mdl-menu__item" data-val="6" data-tag="opt7"></li>
+              
                 <li class="mdl-menu__item" data-val="8" data-tag="opt4"></li>
                 <li class="mdl-menu__item" data-val="9" data-tag="opt9"></li>
                 <li class="mdl-menu__item" data-val="10" data-tag="opt10"></li>
                 <li class="mdl-menu__item" data-val="11" data-tag="opt11"></li>
+                <li class="mdl-menu__item" data-val="3" data-tag="opt13"></li>
                 <li class="mdl-menu__item" data-val="99" data-tag="opt12"></li>
+               
             </ul>
         </div>
+        
+        <div id="divSpeaker" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="txtSpeaker" />
+            <label class="mdl-textfield__label" for="txtSpeaker" data-tag="pMember"></label>
+        </div>
         <div id="options">
-            <button aria-label='champion mode' id="btnChampion" class="btnAction"><img class="iconSVG-MD" id="imgTrophy"
-                    src="img/icons-svg/trophy.svg" height="48.93" width="48.93" alt="champion" /></button>
-            <button aria-label='agenda' id="btnTimetable" class="btnAction"><img class="iconSVG-MD"
-                    src="img/icons-svg/timetable.svg" height="48.93" width="48.93" alt="timetable" /></button>
-            <button aria-label='invert colors' id="btnInvert" class="btnAction"><img class="iconSVG-MD"
+            <button hidden  aria-label='champion mode' id="btnChampion" class="btnAction"><img class="iconSVG-MD" id="imgTrophy"
+                    src="img/icons/show.svg" height="38.93" width="8.93" alt="champion" /></button>
+            <button  aria-label='agenda' id="btnTimetable" class="btnAction"><img class="iconSVG-MD"
+                    src="img/icons/report-svgrepo-com.svg" height="28.93" width="38.93" alt="timetable" /></button>
+            <button hidden  aria-label='invert colors' id="btnInvert" class="btnAction"><img class="iconSVG-MD"
                     src="img/icons-svg/yin-yang.svg" height="48.93" width="48.93" alt="invert" /></button>
-            <button aria-label='enable or disable beeping' id="btnBeep" class="btnAction"><img class="iconSVG-MD"
+            <button hidden aria-label='enable or disable beeping' id="btnBeep" class="btnAction"><img class="iconSVG-MD"
                     id="imgBeep" src="img/icons-svg/volume-off.svg" height="48.93" width="48.93"
                     alt="volume" /></button>
-            <button aria-label='enable or disable vibration' id="btnVibrate" class="btnAction"><img class="iconSVG-MD"
+            <button hidden aria-label='enable or disable vibration' id="btnVibrate" class="btnAction"><img class="iconSVG-MD"
                     id="imgVibrate" src="img/icons-svg/vibrate-off.svg" height="48.93" width="48.93"
                     alt="vibrate" /></button>
-            <button aria-label='enable or disable clapping' id="btnClap" class="btnAction"><img class="iconSVG"
+            <button hidden aria-label='enable or disable clapping' id="btnClap" class="btnAction"><img class="iconSVG"
                     id="imgClap" src="img/icons-svg/clapping-off.svg" height="41.94" width="41.94"
                     alt="clapping" /></button>
             <button hidden aria-label='about us' id="btnAbout" class="btnAction"><img class="iconSVG-MD"
                     src="img/icons-svg/information-variant.svg" height="48.93" width="48.93" alt="info" /></button>
-        </div>
-        <div id="divSpeaker" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="txtSpeaker" />
-            <label class="mdl-textfield__label" for="txtSpeaker" data-tag="pMember"></label>
         </div>
         <div id="playControl" class="container" style="height: 100%">
             <div id="innerPlayContainer">
@@ -138,6 +152,7 @@
                         </g>
                     </svg>
                 </div>
+               
                 <div id="controls">
                     <div id="remainTime" class="display-remain-time">00:00:00</div>
                     <div class="row">
@@ -518,10 +533,15 @@
                 data-tag="close"></button>
         </div>
     </dialog>
+    
     <div id="snackbarMsg" class="mdl-js-snackbar mdl-snackbar">
         <div class="mdl-snackbar__text"></div>
         <button aria-label='close' class="mdl-snackbar__action" tabindex="-1" type="button"></button>
     </div>
+
+    <footer>
+        Made with ❤️  by Naaji
+    </footer>
     
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XCS79V4BL"></script>

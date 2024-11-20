@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-title" content="Toastmasters Timer">
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Najid  Navas">
-    <title>Toastmasters Timer | Always ready for Your Speeches</title>
+    <title>Cisco Xpressions Toastmasters Timer | Always ready for Your Speeches</title>
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" />
     <link rel="stylesheet" href="css/loading.min.css" />
     <link rel="stylesheet" href="css/timer.min.css" rel="preload" as="style" />
@@ -28,19 +28,9 @@
     <script src="js/lib/devicedetector-min.js"></script>
     <script src="js/components/getmdl-select.min.js"></script>
 
-    <!-- iOS icons -->
-    <link rel="apple-touch-icon" href="img/icons/ios/touch-icon-iphone.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/ios/ios-appicon-152-152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/ios/ios-appicon-180-180.png" />
-    <link rel="apple-touch-icon" sizes="167x167" href="img/icons/ios/ios-appicon-167-167.png" />
+    
 
-    <link href="img/icons/ios/ios-launchimage-2048-2732.png" sizes="2048x2732" rel="apple-touch-startup-image" />
-    <link href="img/icons/ios/ios-launchimage-1668-2224.png" sizes="1668x2224" rel="apple-touch-startup-image" />
-    <link href="img/icons/ios/ios-launchimage-1536-2048.png" sizes="1536x2048" rel="apple-touch-startup-image" />
-    <link href="img/icons/ios/ios-launchimage-1125-2436.png" sizes="1125x2436" rel="apple-touch-startup-image" />
-    <link href="img/icons/ios/ios-launchimage-1242-2208.png" sizes="1242x2208" rel="apple-touch-startup-image" />
-    <link href="img/icons/ios/ios-launchimage-750-1334.png" sizes="750x1334" rel="apple-touch-startup-image" />
-    <link href="img/icons/ios/ios-launchimage-640-1136.png" sizes="640x1136" rel="apple-touch-startup-image" />
+    
 
     <meta name="monetag" content="1f0303dfbd4fffb72d612f2737610c5c">
 
@@ -57,14 +47,37 @@
     <meta property="twitter:title" content="Toastmasters Timer">
     <meta property="twitter:description" content="Toastmasters Timer">
     <meta property="twitter:image" content="img/preview.jpg">
+    <style>
+        body {
+            background-color: #1e1c1c;
+        }
+        .stylish-heading {
+            font-size: 2em;
+            color: #f6f6f6;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+            font-family: 'Arial', sans-serif;
+            margin-top: 20px;
+        }
+        
+    </style>
 </head>
 
 <body>
-    <h1 style="display: none">Toastmasters Timer</h1>
-    <h2 style="display: none">The best Toastmasters Timer for your meetings, it's simple, fast, and accurate.</h2>
+    <div id="logo-container" style="position: absolute; top: 10px; left: 10px;">
+        <img src="img/toastmasters.png" alt="Logo" height="50">
+    </div>
+    <div id="logo-container-right" style="position: absolute; top: 10px; right: 10px;">
+        <img src="img/ciscoxpresssions.png" alt="Logo" height="50">
+    </div>
+    
+    
+    <h5 class="stylish-heading">Toastmasters Timer</h5>
+  
     <div id="loading-container">
         <div id="loading" class="lds-dual-ring"></div>
     </div>
+    
 
     <div id="superContainer" style="display: none;">
         <div id="divSpeechType" class="mdl-textfield mdl-js-textfield getmdl-select getmdl-select__fix-height">

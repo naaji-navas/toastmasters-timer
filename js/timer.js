@@ -106,7 +106,7 @@ let isPaused = false,
     isNinjaMode = false,
     isTextPreviewMode = false,
     isFirstTime = false,
-    isColorBlindnessEnabled = false;
+    isColorBlindnessEnabled = true;
 
 let dateFormat = "DD/MM/YYYY",
     latestDB = "1.0",
